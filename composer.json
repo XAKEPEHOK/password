@@ -9,6 +9,9 @@
             "email": "icq-475204@ya.ru"
         }
     ],
+    "require": {
+        "php": ">=5.5"
+    },
     "require-dev": {
         "phpunit/phpunit": "^6.0"
     },
