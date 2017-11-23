@@ -1,0 +1,25 @@
+{
+    "name": "xakepehok/password",
+    "type": "library",
+    "description": "Password object",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "XAKEPEHOK",
+            "email": "icq-475204@ya.ru"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "XAKEPEHOK\\Password\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "XAKEPEHOK\\Password\\": "tests/"
+        }
+    }
+}
