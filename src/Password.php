@@ -13,6 +13,11 @@ class Password
     private $password;
     private $hash;
 
+    /**
+     * Password constructor.
+     * @param string $password
+     * @throws PasswordException
+     */
     public function __construct(string $password)
     {
         $this->guardShort($password);
@@ -35,11 +40,19 @@ class Password
         return password_verify($this->password, $hash);
     }
 
+    /**
+     * @return Password
+     * @throws \Exception
+     */
     public static function random(): self
     {
         return new self(bin2hex(random_bytes(16)));
     }
 
+    /**
+     * @param $password
+     * @throws PasswordException
+     */
     private function guardShort($password)
     {
         if (strlen($password) < 6) {
